@@ -233,3 +233,10 @@ module.exports.tsConfig =`{
   "exclude": ["node_modules"],
 }
 `
+module.exports.jestSample = `describe('Test suit', () => {
+
+  test('should return true', () => {
+    expect(1 === 1).toBe(true);
+  });
+
+});`

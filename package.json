@@ -4,7 +4,7 @@
   "description": "Scaffold a TypeScript project with ESLint and Jest configured out of the box.",
   "main": "",
   "scripts": {
-    "create-ts-app": "node ./tasks/create-ts-app.js",
+    "create-ts-app": "node ./tasks/create-ts-app.js"
   },
   "repository": {
     "type": "git",
@@ -12,10 +12,8 @@
   },
   "author": "Aidin Rasti",
   "license": "MIT",
-  "type": "module",
   "bugs": {
     "url": "https://github.com/Aidiiin/create-ts-app/issues"
   },
-  "homepage": "https://github.com/Aidiiin/create-ts-app#readme",
-
+  "homepage": "https://github.com/Aidiiin/create-ts-app#readme"
 }

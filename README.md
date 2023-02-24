@@ -1,2 +1,2 @@
 # create-ts-app
-Scaffold an empty TypeScript project with ESLint.
+Scaffold a TypeScript project with ESLint and Jest configured out of the box.
