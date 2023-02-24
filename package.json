@@ -1,0 +1,21 @@
+{
+  "name": "create-ts-app",
+  "version": "0.0.1",
+  "description": "Scaffold a TypeScript project with ESLint and Jest configured out of the box.",
+  "main": "",
+  "scripts": {
+    "create-ts-app": "node ./tasks/create-ts-app.js",
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aidiiin/create-ts-app.git"
+  },
+  "author": "Aidin Rasti",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Aidiiin/create-ts-app/issues"
+  },
+  "homepage": "https://github.com/Aidiiin/create-ts-app#readme",
+
+}
