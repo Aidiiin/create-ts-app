@@ -4,7 +4,7 @@
   "description": "Scaffold a TypeScript project with ESLint and Jest configured out of the box.",
   "main": "",
   "scripts": {
-    "ts-app-starter": "node ./tasks/ts-app-starter.js"
+    "ts-app-starter": "node ./tasks/create.js"
   },
   "repository": {
     "type": "git",
