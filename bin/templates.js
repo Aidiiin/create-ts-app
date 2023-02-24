@@ -1,4 +1,4 @@
-module.exports.gitIgnore = `# Logs
+export const gitIgnore = `# Logs
 logs
 *.log
 npm-debug.log*
@@ -133,12 +133,12 @@ build
 .vscode
 `
 
-module.exports.eslintIgnore = `node_modules
+export const eslintIgnore = `node_modules
 build
 coverage
 `
 
-module.exports.eslint = `module.exports = {
+export const eslint = `module.exports = {
   env: {
     browser: true,
     es2021: true,
@@ -166,7 +166,7 @@ module.exports.eslint = `module.exports = {
 };
 `
 
-module.exports.jest = `
+export const jest = `
 const config = {
   preset: 'ts-jest/presets/default-esm',
   // transform: {'^.+\\.ts?$': 'ts-jest'},
@@ -178,7 +178,7 @@ const config = {
 export default config;
 `
 
-module.exports.package = `{
+export const packageJson = `{
   "name": "#{name}",
   "version": "0.0.1",
   "description": "#{description}",
@@ -216,7 +216,7 @@ module.exports.package = `{
   }
 }
 `
-module.exports.tsConfig =`{
+export const tsConfig =`{
   "extends": "@tsconfig/node16-strictest-esm/tsconfig.json",
   "compilerOptions": {
     "preserveConstEnums": true,
@@ -233,7 +233,7 @@ module.exports.tsConfig =`{
   "exclude": ["node_modules"],
 }
 `
-module.exports.jestSample = `describe('Test suit', () => {
+export const jestSample = `describe('Test suit', () => {
 
   test('should return true', () => {
     expect(1 === 1).toBe(true);

@@ -7,8 +7,9 @@
     "ts-start": "bin/create.js"
   },
   "scripts": {
-    "ts-app-starter": "node ./tasks/create.js"
+    "ts-app-starter": "node ./bin/create.js"
   },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Aidiiin/ts-app-starter.git"
@@ -18,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/Aidiiin/ts-app-starter/issues"
   },
-  "homepage": "https://github.com/Aidiiin/ts-app-starter#readme"
+  "homepage": "https://github.com/Aidiiin/ts-app-starter#readme",
+  "dependencies": {
+    "chalk": "^5.2.0"
+  }
 }

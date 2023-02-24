@@ -1,10 +1,10 @@
 #! /usr/bin/env node
 'use strict';
-const fs = require('fs').promises;
-const readline = require('readline').promises;
-const path = require('path');
-const cp = require('child_process');
-const templates = require('./templates');
+import fs from 'fs/promises';
+import readline from 'readline/promises';
+import * as templates from './templates.js';
+import chalk from 'chalk';
+
 
 const cleanup = () => {
   console.log('Cleaning up.');
@@ -38,10 +38,10 @@ const read = readline.createInterface({
 
 
 async function main() {
-  const name = await read.question(`What is your project's name? `);
-  const description = await read.question(`What is the description of your project? `);
-  const author = await read.question(`Who is the Author? `);
-  const git = await read.question(`What is the Git url? `);
+  const name = await read.question(chalk.blue("What is your project's name?"));
+  const description = await read.question(chalk.blue(`What is the description of your project? `));
+  const author = await read.question(chalk.blue(`Who is the Author? `));
+  const git = await read.question(chalk.blue(`What is the Git url? `));
 
   await fs.mkdir(name);
 
@@ -55,7 +55,7 @@ async function main() {
   await fs.writeFile(`${name}/tests/sample.spec.ts`, templates.jestSample, 'utf8');
 
 
-  const packageJson = templates.package
+  const packageJson = templates.packageJson
   .replaceAll('#{name}', name)
   .replaceAll('#{description}', description)
   .replaceAll('#{author}', author)
