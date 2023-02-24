@@ -1,6 +1,6 @@
 {
   "name": "ts-app-starter",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Scaffold a TypeScript project with ESLint and Jest configured out of the box.",
   "main": "",
   "bin": {

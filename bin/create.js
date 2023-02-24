@@ -5,7 +5,6 @@ import readline from 'readline/promises';
 import * as templates from './templates.js';
 import chalk from 'chalk';
 
-
 const cleanup = () => {
   console.log('Cleaning up.');
   // Reset changes made to package.json files.
@@ -28,9 +27,6 @@ const handleError = e => {
 process.on('SIGINT', handleExit);
 process.on('uncaughtException', handleError);
 
-console.log();
-console.log();
-
 const read = readline.createInterface({
   input: process.stdin,
   output: process.stdout
@@ -38,7 +34,8 @@ const read = readline.createInterface({
 
 
 async function main() {
-  const name = await read.question(chalk.blue("What is your project's name?"));
+  console.log();
+  const name = await read.question(chalk.blue("What is your project's name? "));
   const description = await read.question(chalk.blue(`What is the description of your project? `));
   const author = await read.question(chalk.blue(`Who is the Author? `));
   const git = await read.question(chalk.blue(`What is the Git url? `));
@@ -56,13 +53,13 @@ async function main() {
 
 
   const packageJson = templates.packageJson
-  .replaceAll('#{name}', name)
-  .replaceAll('#{description}', description)
-  .replaceAll('#{author}', author)
-  .replaceAll('#{gitUrl}', git);
+    .replaceAll('#{name}', name)
+    .replaceAll('#{description}', description)
+    .replaceAll('#{author}', author)
+    .replaceAll('#{gitUrl}', git);
 
   await fs.writeFile(`${name}/package.json`, packageJson, 'utf8');
   read.close();
 }
 
-main().then(() => console.log('Finished!')).catch(handleError);
+main().then(() => console.log(chalk.yellow('Finished!'))).catch(handleError);
