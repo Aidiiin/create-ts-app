@@ -48,8 +48,8 @@ async function main() {
   await fs.writeFile(`${name}/jest.config.js`, templates.jest, 'utf8');
   await fs.writeFile(`${name}/tsconfig.json`, templates.tsConfig, 'utf8');
   
-  await fs.mkdir(`${name}/tests`);
-  await fs.writeFile(`${name}/tests/sample.spec.ts`, templates.jestSample, 'utf8');
+  await fs.mkdir(`${name}/test`);
+  await fs.writeFile(`${name}/test/sample.spec.ts`, templates.jestSample, 'utf8');
 
 
   const packageJson = templates.packageJson

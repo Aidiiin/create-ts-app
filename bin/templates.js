@@ -171,7 +171,7 @@ const config = {
   preset: 'ts-jest/presets/default-esm',
   // transform: {'^.+\\.ts?$': 'ts-jest'},
   testEnvironment: 'node',
-  testRegex: '/tests/.*\\.(test|spec)?\\.(ts|tsx)$',
+  testRegex: '/test/.*\\.(test|spec)?\\.(ts|tsx)$',
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node']
 };
 
@@ -229,7 +229,7 @@ export const tsConfig =`{
     "importsNotUsedAsValues": "remove",
     "exactOptionalPropertyTypes": false
   },
-  "include": ["src/**/*", "tests/**/*"],
+  "include": ["src/**/*", "test/**/*"],
   "exclude": ["node_modules"],
 }
 `
