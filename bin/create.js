@@ -62,7 +62,7 @@ async function main() {
     .replaceAll('#{gitUrl}', git);
     
   await fs.writeFile(`${name}/package.json`, packageJson, 'utf8');
-
+  console.log();
   console.log(chalk.blue('Installing dependencies...'))
   console.log(execSync(`npm i install`, {cwd: name}).toString());
 
@@ -82,4 +82,4 @@ async function main() {
   read.close();
 }
 
-main().then(() => console.log(chalk.yellow('Finished!'))).catch(handleError);
+main().then(() => console.log(chalk.green('Finished!'))).catch(handleError);

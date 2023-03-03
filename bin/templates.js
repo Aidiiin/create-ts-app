@@ -260,5 +260,5 @@ app.listen(port, () => {
 
 export const emptyNode = `
 
-  console.log(\`Hello World!\`);
-});`
+console.log(\`Hello World!\`);
+`
