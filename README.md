@@ -26,3 +26,7 @@ For example, the above command Will install `express`, `@types/node`, and `@type
 - `node`
   - Installs `@types/node`.
   - writes a Hello World program to `src/index.ts`.
+  
+## Requirements
+
+- Node.js v18.0.0 or later.
