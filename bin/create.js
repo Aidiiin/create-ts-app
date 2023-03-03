@@ -63,15 +63,22 @@ async function main() {
     
   await fs.writeFile(`${name}/package.json`, packageJson, 'utf8');
 
+  console.log(chalk.blue('Installing dependencies...'))
+  console.log(execSync(`npm i install`, {cwd: name}).toString());
+
   if (projectType === 'express') {
     // execute a command to install express
     console.log();
-    console.log(chalk.blue('Installing express.js ...'))
+    console.log(chalk.blue('Installing express.js...'));
     console.log(execSync(`npm i express --save`, {cwd: name}).toString());
     console.log(execSync(`npm i @types/node @types/express --save-dev`, {cwd: name}).toString());
     
     await fs.writeFile(`${name}/src/server.ts`, templates.express, 'utf8');
+  } else if (projectType === 'node') {
+    console.log(execSync(`npm i @types/node --save-dev`, {cwd: name}).toString());
+    await fs.writeFile(`${name}/src/index.ts`, templates.emptyNode, 'utf8');
   }
+
   read.close();
 }
 

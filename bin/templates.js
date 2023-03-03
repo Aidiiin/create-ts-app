@@ -257,3 +257,8 @@ app.get('/', (_req, _res) => {
 app.listen(port, () => {
   console.log(\`Server is running on http://localhost:\${port}/\`);
 });`
+
+export const emptyNode = `
+
+  console.log(\`Hello World!\`);
+});`
